@@ -37,7 +37,7 @@ const Navbar = () => {
         <div className="gpt3__navbar">
             <div className="gpt3__navbar-links">
                 <div className="gpt3__navbar-links_logo">
-                    <img src={images.logo} alt="logo" />
+                    <img src={images.logo1} alt="logo" />
                 </div>
                 <div className="gpt3__navbar-links_container">
                     <Menu />

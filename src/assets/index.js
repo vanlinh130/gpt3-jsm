@@ -1,5 +1,8 @@
 const images = {
-    logo: require('./logo.svg').default,
+    logo1: require('./images/logo.svg').default,
+    logo2: require('./images/logo.svg'),
+    people: require('./images/people.png'),
+    ai: require('./images/ai.png'),
 };
 
 export default images;
