@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
+import classNames from 'classnames/bind';
 import images from '../../assets';
-import './navbar.css';
+import styles from './Navbar.module.scss';
+
+const cx = classNames.bind(styles);
 
 const Menu = () => (
     <>
@@ -34,20 +37,20 @@ const Navbar = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
 
     return (
-        <div className="gpt3__navbar">
-            <div className="gpt3__navbar-links">
-                <div className="gpt3__navbar-links_logo">
+        <div className={cx('navbar')}>
+            <div className={cx('navbar-links')}>
+                <div className={cx('navbar-links_logo')}>
                     <img src={images.logo1} alt="logo" />
                 </div>
-                <div className="gpt3__navbar-links_container">
+                <div className={cx('navbar-links_container')}>
                     <Menu />
                 </div>
             </div>
-            <div className="gpt3__navbar-sign">
+            <div className={cx('navbar-sign')}>
                 <SignInUp />
             </div>
 
-            <div className="gpt3__navbar-menu">
+            <div className={cx('navbar-menu')}>
                 {toggleMenu ? (
                     <RiCloseLine color="#fff" size={27} onClick={() => setToggleMenu(false)} />
                 ) : (
@@ -55,11 +58,11 @@ const Navbar = () => {
                 )}
 
                 {toggleMenu && (
-                    <div className="gpt3__navbar-menu_container scale-up-center">
-                        <div className="gpt3__navbar-menu_container-links">
+                    <div className={cx('navbar-menu_container', 'scale-up-center')}>
+                        <div className={cx('navbar-menu_container-links')}>
                             <Menu />
                         </div>
-                        <div className="gpt3__navbar-menu_container-links-sign">
+                        <div className={cx('navbar-menu_container-links-sign')}>
                             <SignInUp />
                         </div>
                     </div>

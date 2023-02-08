@@ -1,10 +1,13 @@
 import React from 'react';
-import './brand.css';
+import classNames from 'classnames/bind';
+import styles from './Brand.module.scss';
 import images from '../../assets';
+
+const cx = classNames.bind(styles);
 
 const Brand = () => {
     return (
-        <div className="gpt3_brand">
+        <div className={cx('brand')}>
             <div>
                 <img src={images.google} alt="google" />
             </div>
